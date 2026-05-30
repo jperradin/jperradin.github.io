@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#f5f3ee"></rect>
+  <rect x="3.5" y="3.5" width="57" height="57" rx="9.5" fill="none" stroke="#3f6b54" stroke-width="2"></rect>
+  <text x="32" y="33" font-family="Georgia, &#39;Newsreader&#39;, serif" font-size="30" font-weight="600" fill="#26241f" text-anchor="middle" dominant-baseline="central">JP</text>
+</svg>
