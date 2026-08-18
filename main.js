@@ -7,15 +7,6 @@
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
-  /* header shadow on scroll */
-  var header = document.getElementById('siteHeader');
-  function onScroll() {
-    if (window.scrollY > 8) header.classList.add('scrolled');
-    else header.classList.remove('scrolled');
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
   /* mobile menu toggle */
   var nav = document.getElementById('nav');
   var toggle = document.getElementById('navToggle');
@@ -32,27 +23,43 @@
     });
   }
 
-  /* scrollspy — highlight nav link for the section in view */
-  var sections = ['about', 'publications', 'curriculum', 'talks', 'contact']
-    .map(function (id) { return document.getElementById(id); })
-    .filter(Boolean);
-  var linkFor = {};
+  /* header shadow + scrollspy, in document order */
+  var header = document.getElementById('siteHeader');
+  var links = {};
   document.querySelectorAll('.nav-links a').forEach(function (a) {
     var href = a.getAttribute('href') || '';
-    if (href.charAt(0) === '#') linkFor[href.slice(1)] = a;
+    if (href.charAt(0) === '#') links[href.slice(1)] = a;
   });
-  if ('IntersectionObserver' in window && sections.length) {
-    var spy = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) {
-          Object.keys(linkFor).forEach(function (k) { linkFor[k].classList.remove('active'); });
-          var link = linkFor[e.target.id];
-          if (link) link.classList.add('active');
-        }
-      });
-    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
-    sections.forEach(function (s) { spy.observe(s); });
+  var sections = Object.keys(links)
+    .map(function (id) { return document.getElementById(id); })
+    .filter(Boolean)
+    .sort(function (a, b) { return a.offsetTop - b.offsetTop; });
+
+  /* ponytail: match the CSS anchor landing point, else a jumped-to section
+     sits below the line and the section above it stays highlighted */
+  var anchorLine = (parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) ||
+                    header.offsetHeight) + 4;
+
+  function onScroll() {
+    header.classList.toggle('scrolled', window.scrollY > 8);
+
+    /* last section whose top crossed the line wins. Plain rect test,
+       no IntersectionObserver band to fall through. */
+    var current = null;
+    sections.forEach(function (s) {
+      if (s.getBoundingClientRect().top <= anchorLine) current = s;
+    });
+    /* bottom of page: last section may never reach the line */
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+      current = sections[sections.length - 1] || current;
+    }
+    sections.forEach(function (s) {
+      links[s.id].classList.toggle('active', s === current);
+    });
   }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  onScroll();
 
   /* reveal-on-scroll */
   var revealEls = document.querySelectorAll('.section, .hero-grid');
