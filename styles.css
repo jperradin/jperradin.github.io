@@ -31,6 +31,7 @@ a:hover { text-decoration: underline; }
 aside { position: sticky; top: 48px; align-self: start; }
 aside img { width: 160px; height: 160px; object-fit: cover; border-radius: 50%; }
 h1 { font-size: 1.5rem; margin: 16px 0 4px; }
+h1 a { color: inherit; }
 .role { color: var(--muted); margin: 0 0 16px; font-size: 0.95rem; }
 .links { display: flex; flex-direction: column; gap: 4px; }
 
@@ -46,7 +47,6 @@ ul.dated { list-style: none; padding: 0; }
 ul.dated li { display: flex; gap: 12px; margin-bottom: 8px; }
 ul.dated .when { flex: 0 0 6.5em; color: var(--muted); }
 
-.note { font-size: 0.92em; color: var(--muted); }
 
 footer { margin-top: 48px; font-size: 0.85em; color: var(--muted); }
 
