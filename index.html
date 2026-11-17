@@ -1,391 +1,117 @@
 <!DOCTYPE html>
-<html lang="en" data-direction="editorial" data-accent="sage">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Julien Perradin — Computational Physics of Disordered Materials</title>
 <meta name="description" content="Dr. Julien Perradin — computational physicist working on statistical physics, disordered systems, and polyamorphism in glasses such as vitreous silica under pressure." />
-
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-
-<meta name="theme-color" content="#f5f3ee" />
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+<div class="layout">
 
-<!-- ============================ HEADER ============================ -->
-<header class="site-header" id="siteHeader">
-  <nav class="nav" id="nav">
-    <a href="#top" class="brand">
-      <span>Julien Perradin</span>
-      <span class="brand-mark">PhD</span>
-    </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#me">Me</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#talks">Talks</a></li>
-      <li><a href="#curriculum">Curriculum</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="assets/Perradin-CV.pdf" class="nav-cta" id="cvBtn">Download CV ↓</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+<aside>
+  <img src="assets/julien.jpg" alt="Photo of Julien Perradin" />
+  <h1>Julien Perradin</h1>
+  <p class="role">Postdoctoral researcher<br />Laboratoire Gulliver, ESPCI Paris PSL</p>
+  <nav class="links">
+    <a href="mailto:julien.perradin@protonmail.com">Email</a>
+    <a href="assets/Perradin-CV.pdf">CV (PDF)</a>
+    <a href="https://scholar.google.com/citations?hl=en&amp;user=xru1X6YAAAAJ">Google Scholar</a>
+    <a href="https://orcid.org/0009-0009-5649-9414">ORCID</a>
+    <a href="https://github.com/jperradin">GitHub</a>
+    <a href="https://arxiv.org/search/cond-mat?searchtype=author&amp;query=Perradin,+J">arXiv</a>
   </nav>
-</header>
+</aside>
 
-<main id="top">
+<main>
 
-  <!-- ============================ HERO ============================ -->
-  <section class="hero wrap" id="me">
-    <div class="hero-grid">
-      <div>
-        <span class="eyebrow">Computational Physics · Disordered Systems</span>
-        <h1>Julien Perradin</h1>
-        <p class="role">Postdoctoral Researcher<span class="sep">/</span>Statistical Physics of Glasses</p>
-        <p class="lede">
-          I study the physics of <em>disordered and complex materials</em> — using large-scale
-          molecular dynamics and numerical methods to understand structural transitions,
-          percolation phenomena, and polyamorphism in glasses such as vitreous silica under
-          pressure.
-        </p>
-        <div class="quick-links">
-          <a href="mailto:julien.perradin@protonmail.com"><span class="dot"></span>Email</a>
-          <a href="https://scholar.google.com/citations?hl=en&user=xru1X6YAAAAJ" target="_blank" rel="noopener"><span class="dot"></span>Google Scholar</a>
-          <a href="https://orcid.org/0009-0009-5649-9414" target="_blank" rel="noopener"><span class="dot"></span>ORCID</a>
-          <a href="https://github.com/jperradin" target="_blank" rel="noopener"><span class="dot"></span>GitHub</a>
-          <a href="https://arxiv.org/search/cond-mat?searchtype=author&query=Perradin,+J" target="_blank" rel="noopener"><span class="dot"></span>arXiv</a>
-        </div>
-      </div>
-      <div class="portrait">
-        <img src="assets/julien.jpg" alt="Portrait of Julien Perradin" width="580" height="580" />
-      </div>
-    </div>
-  </section>
+<section id="about">
+  <h2>About</h2>
+  <p>My research sits at the interface of statistical physics, computational materials science,
+  and numerical methods. I am broadly interested in the physics of disordered and complex systems,
+  with a focus on structural transitions, percolation phenomena, and the development of
+  computational tools to characterise them.</p>
+  <p>My doctoral work studied polyamorphism in vitreous silica under pressure: treating
+  amorphous–amorphous transitions as percolation and critical phenomena, and connecting them to
+  the mechanical anomalies of compressed glass. This relies on classical and <i>ab initio</i>
+  molecular dynamics, neural-network interatomic potentials (HDNNP), metadynamics, and cluster
+  analysis, supported by electronic-structure methods (DFT, DFTB).</p>
+  <p>Much of the methodology behind my papers is released as open-source software, including
+  <a href="https://github.com/jperradin/nexus">Nexus-CAT</a>, a framework for long-range
+  structural descriptors in glassy materials built from percolation theory.</p>
+</section>
 
-  <!-- ============================ ABOUT ============================ -->
-  <section class="section" id="about">
-    <div class="wrap section-grid">
-      <div class="section-meta">
-        <span class="num">01</span>
-        <h2>About &amp; Research</h2>
-        <p class="meta-note">A short statement of what I work on and why.</p>
-      </div>
-      <div class="prose">
-        <p>
-          My research sits at the interface of <strong>statistical physics</strong>,
-          <strong>computational materials science</strong>, and <strong>numerical methods</strong>.
-          I am broadly interested in the physics of disordered and complex systems, with a focus
-          on structural transitions, percolation phenomena, and the development of computational
-          tools to characterise them.
-        </p>
-        <p>
-          My doctoral work studied <strong>polyamorphism in vitreous silica under pressure</strong>:
-          treating amorphous–amorphous transitions as percolation and critical phenomena, and
-          connecting them to the mechanical anomalies of compressed glass. This relies on classical
-          and <em>ab initio</em> molecular dynamics, neural-network interatomic potentials (HDNNP),
-          metadynamics, and cluster analysis, supported by electronic-structure methods (DFT, DFTB).
-        </p>
-        <p>
-          I care about reproducible, open computational work. Much of the methodology behind my
-          papers is released as software — including <a href="https://github.com/jperradin" target="_blank" rel="noopener">Nexus-CAT</a>,
-          a framework for long-range structural descriptors in glassy materials built from
-          percolation theory. In the long term I aim for an academic position combining research
-          with teaching. Outside the lab, you'll usually find me with a guitar, on a bike, or cooking.
-        </p>
-        <div class="topics" role="list" aria-label="Research topics">
-          <span role="listitem">Polyamorphism</span>
-          <span role="listitem">Amorphous–amorphous transitions</span>
-          <span role="listitem">Percolation</span>
-          <span role="listitem">Critical phenomena</span>
-          <span role="listitem">Vitreous silica</span>
-          <span role="listitem">Molecular dynamics</span>
-          <span role="listitem">Neural-network potentials</span>
-          <span role="listitem">DFT / DFTB</span>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="publications">
+  <h2>Publications</h2>
+  <ol class="pubs">
+    <li><b>J. Perradin</b>, S. Ispas, R. V. Paredes, A. Hasmy, B. Hehlen.
+      <span class="title">Percolation criticality of amorphous-amorphous transitions in compressed glasses.</span>
+      <i>Phys. Rev. E</i> <b>114</b>, 055414 (2026).
+      [<a href="files/perradin-2026-pre-percolation.pdf">pdf</a>]
+      [<a href="https://doi.org/10.1103/5lnm-slgg">doi</a>]
+      [<a href="https://arxiv.org/abs/2606.04748">arXiv</a>]</li>
+    <li><b>J. Perradin</b>, S. Ispas, A. Hasmy, B. Hehlen.
+      <span class="title">Nexus-CAT: a computational framework to define long-range structural descriptors in glassy materials from percolation theory.</span>
+      <i>Comput. Phys. Commun.</i> <b>327</b>, 110291 (2026).
+      [<a href="files/perradin-2026-cpc-nexus-cat.pdf">pdf</a>]
+      [<a href="https://doi.org/10.1016/j.cpc.2026.110291">doi</a>]
+      [<a href="https://arxiv.org/abs/2604.11476">arXiv</a>]
+      [<a href="https://github.com/jperradin/nexus">code</a>]</li>
+    <li><b>J. Perradin</b>, S. Ispas, A. Hasmy, B. Hehlen.
+      <span class="title">Percolation-driven mechanical anomalies in compressed vitreous silica.</span>
+      In preparation.</li>
+  </ol>
+  <p class="note">PhD thesis: <i>Polyamorphism in vitreous silica under pressure: from percolation
+  transitions to mechanical responses, a molecular dynamics study</i>, Université de Montpellier (2025).
+  [<a href="files/perradin-2025-phd-thesis.pdf">pdf</a>]</p>
+</section>
 
-  <!-- ============================ PUBLICATIONS ============================ -->
-  <section class="section section--alt" id="publications">
-    <div class="wrap section-grid">
-      <div class="section-meta">
-        <span class="num">02</span>
-        <h2>Publications</h2>
-        <p class="meta-note">Recent and in-progress work. Up-to-date list on ORCID.</p>
-      </div>
-      <div class="pub-list">
+<section id="talks">
+  <h2>Talks &amp; posters</h2>
+  <ul class="dated">
+    <li><span class="when">2025</span><span>Criticality of amorphous–amorphous transitions in compressed silica glass. GOMD — Glass &amp; Optical Materials Division Meeting, Vancouver, CA.</span></li>
+    <li><span class="when">2024</span><span>Evidence of percolation transitions in silica glass under pressure. NCM15 — 15th Int. Conf. on the Structure of Non-Crystalline Materials, Cambridge, UK.</span></li>
+    <li><span class="when">2023</span><span>Evidence of percolation transitions in silica glass under pressure (poster). USTV–DGG joint meeting, Orléans, FR.</span></li>
+  </ul>
+</section>
 
-        <article class="pub">
-          <div class="year">2026</div>
-          <div>
-            <div class="pub-title">Percolation Criticality of Amorphous-Amorphous Transitions in Compressed Glasses<span class="status">submitted</span></div>
-            <div class="authors"><span class="me">J. Perradin</span>, S. Ispas, R. V. Paredes, A. Hasmy, B. Hehlen</div>
-            <div class="venue"><span class="vol">Phys. Rev. E, Volume 114, November 2026, 055414</span> · arXiv:2606.04748</div>
-            <div class="pub-links">
-              <a href="files/perradin-2026-pre-percolation.pdf" target="_blank" rel="noopener">PDF (PRE)</a>
-              <a href="https://doi.org/10.1103/5lnm-slgg" target="_blank" rel="noopener">DOI</a>
-              <a href="https://arxiv.org/abs/2606.04748" target="_blank" rel="noopener">PDF (arXiv)</a>
-              <a href="https://github.com/jperradin" target="_blank" rel="noopener">Code · Nexus-CAT</a>
-            </div>
-          </div>
-        </article>
+<section id="cv">
+  <h2>Positions &amp; education</h2>
+  <ul class="dated">
+    <li><span class="when">2026–</span><span>Postdoctoral researcher, Laboratoire Gulliver, CNRS — ESPCI Paris PSL.
+      Project: <i>Benchmarking Monte Carlo algorithms applied to liquid and supercooled liquid silica</i>.
+      Supervisor: L. Berthier.</span></li>
+    <li><span class="when">2022–2025</span><span>Ph.D. in Physics, Laboratoire Charles Coulomb (L2C), Université de Montpellier.
+      Director: B. Hehlen · Co-director: S. Ispas · Supervisor: A. Hasmy. Defended November 2025.</span></li>
+    <li><span class="when">2020–2022</span><span>M.Sc. Fundamental Physics &amp; Applications — Computational Physics, Université de Montpellier.
+      Internship at CEA Marcoule &amp; L2C on reaction mechanisms of borosilicate glass in the presence of water.</span></li>
+    <li><span class="when">2018–2020</span><span>B.Sc. in Physics, Université Savoie Mont-Blanc, Chambéry.</span></li>
+    <li><span class="when">2016–2018</span><span>DUT Applied Physics — Instrumental Techniques, Université Savoie Mont-Blanc, Annecy-le-Vieux.</span></li>
+  </ul>
 
-        <article class="pub">
-          <div class="year">2026</div>
-          <div>
-            <div class="pub-title">Nexus-CAT: a computational framework to define long-range structural descriptors in glassy materials from percolation theory<span class="status">accepted</span></div>
-            <div class="authors"><span class="me">J. Perradin</span>, S. Ispas, A. Hasmy, B. Hehlen</div>
-            <div class="venue"><span class="vol">Computer Physics Communications, Volume 327, October 2026, 110291</span> · arXiv:2604.11476</div>
-            <div class="pub-links">
-              <a href="files/perradin-2026-cpc-nexus-cat.pdf" target="_blank" rel="noopener">PDF (CPC)</a>
-              <a href="https://doi.org/10.1016/j.cpc.2026.110291" target="_blank" rel="noopener">DOI</a>
-              <a href="https://arxiv.org/abs/2604.11476" target="_blank" rel="noopener">PDF (arXiv)</a>
-              <a href="https://github.com/jperradin" target="_blank" rel="noopener">Code · Nexus-CAT</a>
-            </div>
-          </div>
-        </article>
+  <h3>Teaching (Université de Montpellier)</h3>
+  <ul>
+    <li>Magnetostatics — 30 h tutorials (course lead: B. Hehlen)</li>
+    <li>Python programming — 60 h lab tutorials (course lead: N. Kern)</li>
+    <li>Maniplab — 4 h lab tutorials (course lead: T. Guillet)</li>
+  </ul>
 
-        <article class="pub">
-          <div class="year">2026</div>
-          <div>
-            <div class="pub-title">Percolation-driven mechanical anomalies in compressed vitreous silica<span class="status">in preparation</span></div>
-            <div class="authors"><span class="me">J. Perradin</span>, S. Ispas, A. Hasmy, B. Hehlen</div>
-            <div class="venue">Manuscript in preparation</div>
-          </div>
-        </article>
+  <h3>Grants &amp; awards</h3>
+  <ul>
+    <li>2nd Poster Award, USTV–DGG joint meeting (2023)</li>
+    <li>Doctoral Fellowship, French Ministry of Higher Education and Research (2022–2025)</li>
+  </ul>
 
-      </div>
-    </div>
-  </section>
+  <h3>Skills</h3>
+  <p>Simulation: LAMMPS, CP2K, DFTB+, PLUMED · Programming: Python, Bash, Slurm, C, Fortran, Matlab, Zig ·
+  Languages: French (native), English (fluent)</p>
+</section>
 
-  <!-- ============================ TALKS ============================ -->
-  <section class="section section--alt" id="talks">
-    <div class="wrap section-grid">
-      <div class="section-meta">
-        <span class="num">03</span>
-        <h2>Conferences &amp; Seminars</h2>
-        <p class="meta-note">Selected presentations from international meetings.</p>
-      </div>
-      <div>
-        <div class="talks-group">
-          <h3>Talks <span class="count">02</span></h3>
-          <div class="talk">
-            <div class="yr">2025</div>
-            <div class="body">
-              <div class="t-title">Criticality of amorphous–amorphous transitions in compressed silica glass</div>
-              <div class="t-where">GOMD — Glass &amp; Optical Materials Division Meeting</div>
-            </div>
-            <div class="place">Vancouver, CA</div>
-          </div>
-          <div class="talk">
-            <div class="yr">2024</div>
-            <div class="body">
-              <div class="t-title">Evidence of percolation transitions in silica glass under pressure</div>
-              <div class="t-where">NCM15 — 15th Int. Conf. on the Structure of Non-Crystalline Materials</div>
-            </div>
-            <div class="place">Cambridge, UK</div>
-          </div>
-        </div>
-
-        <div class="talks-group">
-          <h3>Posters <span class="count">01</span></h3>
-          <div class="talk">
-            <div class="yr">2023</div>
-            <div class="body">
-              <div class="t-title">Evidence of percolation transitions in silica glass under pressure</div>
-              <div class="t-where">USTV–DGG joint meeting</div>
-            </div>
-            <div class="place">Orléans, FR</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================ CURRICULUM ============================ -->
-  <section class="section" id="curriculum">
-    <div class="wrap section-grid">
-      <div class="section-meta">
-        <span class="num">04</span>
-        <h2>Curriculum</h2>
-        <p class="meta-note">Appointments, education, and recognition.</p>
-        <p class="meta-note" style="margin-top:.6rem">
-          <a href="assets/Perradin-CV.pdf" style="color:var(--accent-strong);font-family:var(--font-mono);font-size:.8rem;text-decoration:none">Full CV (PDF) ↓</a>
-        </p>
-      </div>
-      <div>
-        <div class="cv-block">
-          <h3>Career</h3>
-          <div class="cv-entry">
-            <div class="when">2026 — Now<br />Paris<br />(FR)</div>
-            <div class="what">
-              <div class="role">Postdoc Researcher</div>
-              <div class="place">Laboratoire Gulliver — CNRS — ESPCI Paris PSL</div>
-              <div class="detail">Thesis: <em>Benchmarking Monte Carlo algorithms applied to liquid and supercooled liquid silica</em></div>
-              <div class="detail">Supervisor: Ludovic Berthier</div>
-            </div>
-          </div>
-        </div>
-        <div class="cv-block">
-          <h3>Education</h3>
-          <div class="cv-entry">
-            <div class="when">2022 — 2025<br />Montpellier<br />(FR)</div>
-            <div class="what">
-              <div class="role">Ph.D. in Physics</div>
-              <div class="place">Laboratoire Charles Coulomb (L2C) — Université de Montpellier</div>
-              <div class="detail">Thesis: <em>Polyamorphism in vitreous silica under pressure: from percolation transitions to mechanical responses, a molecular dynamics study</em> · Defended November 2025 · <a href="files/perradin-2025-phd-thesis.pdf" target="_blank" rel="noopener">Manuscript (PDF)</a></div>
-              <div class="detail">Director: B. Hehlen · Co-director: S. Ispas · Supervisor: A. Hasmy</div>
-            </div>
-          </div>
-          <div class="cv-entry">
-            <div class="when">2020 — 2022<br />Montpellier<br />(FR)</div>
-            <div class="what">
-              <div class="role">M.Sc. Fundamental Physics &amp; Applications — Computational Physics</div>
-              <div class="place">Université de Montpellier</div>
-              <div class="detail">Internship at CEA Marcoule &amp; L2C: reaction mechanisms of borosilicate glass in the presence of water (Supervisors: O. Bouty, S. Ispas)</div>
-            </div>
-          </div>
-          <div class="cv-entry">
-            <div class="when">2018 — 2020<br />Chambéry<br />(FR)</div>
-            <div class="what">
-              <div class="role">B.Sc. in Physics</div>
-              <div class="place">Université Savoie Mont-Blanc, Chambéry</div>
-            </div>
-          </div>
-          <div class="cv-entry">
-            <div class="when">2016 — 2018<br />Annecy<br />(FR)</div>
-            <div class="what">
-              <div class="role">DUT Applied Physics — Instrumental Techniques</div>
-              <div class="place">Université Savoie Mont-Blanc, Annecy-le-Vieux</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cv-block">
-          <h3>Teaching</h3>
-          <div class="cv-entry">
-            <div class="when">Université de<br />Montpellier</div>
-            <div class="what">
-              <div class="role">Magnetostatics — 30 h tutorials (TD)</div>
-              <div class="detail">Faculty of Science · course lead: B. Hehlen</div>
-            </div>
-          </div>
-          <div class="cv-entry">
-            <div class="when">Université de<br />Montpellier</div>
-            <div class="what">
-              <div class="role">Python programming — 60 h lab tutorials (TP)</div>
-              <div class="detail">Faculty of Science · course lead: N. Kern</div>
-            </div>
-          </div>
-          <div class="cv-entry">
-            <div class="when">Université de<br />Montpellier</div>
-            <div class="what">
-              <div class="role">Maniplab — 4 h lab tutorials (TP)</div>
-              <div class="detail">Faculty of Science · course lead: T. Guillet</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cv-block">
-          <h3>Grants &amp; Awards</h3>
-          <div class="cv-entry">
-            <div class="when">2023</div>
-            <div class="what"><div class="role">2nd Poster Award</div><div class="place">USTV–DGG joint meeting</div></div>
-          </div>
-          <div class="cv-entry">
-            <div class="when">2022 — 2025</div>
-            <div class="what"><div class="role">Doctoral Fellowship</div><div class="place">French Ministry of Higher Education and Research</div></div>
-          </div>
-        </div>
-
-        <div class="cv-block">
-          <h3>Skills</h3>
-          <div class="cv-entry">
-            <div class="when">Simulation</div>
-            <div class="what"><div class="skills"><span>LAMMPS</span><span>CP2K</span><span>DFTB+</span><span>PLUMED</span></div></div>
-          </div>
-          <div class="cv-entry">
-            <div class="when">Programming</div>
-            <div class="what"><div class="skills"><span>Python</span><span>Bash</span><span>Slurm</span><span>C</span><span>Fortran</span><span>Matlab</span><span>Zig</span></div></div>
-          </div>
-          <div class="cv-entry">
-            <div class="when">Environment</div>
-            <div class="what"><div class="skills"><span>Linux</span><span>HPC</span><span>LaTeX</span><span>Zotero</span><span>GIMP</span><span>XMGrace</span></div></div>
-          </div>
-          <div class="cv-entry">
-            <div class="when">Open source</div>
-            <div class="what"><div class="skills"><span>Nexus-CAT</span><span>reve</span></div></div>
-          </div>
-          <div class="cv-entry">
-            <div class="when">Languages</div>
-            <div class="what"><div class="skills"><span>French — native</span><span>English — fluent</span></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================ CONTACT ============================ -->
-  <section class="section" id="contact">
-    <div class="wrap section-grid">
-      <div class="section-meta">
-        <span class="num">05</span>
-        <h2>Contact</h2>
-        <p class="meta-note">For collaborations, talks, or a copy of any paper.</p>
-      </div>
-      <div class="contact-card">
-        <div>
-          <div class="field">
-            <span class="lbl">Email</span>
-            <a href="mailto:julien.perradin@protonmail.com">julien.perradin@protonmail.com</a>
-          </div>
-          <div class="field">
-            <span class="lbl">Based in</span>
-            <address>
-              Laboratoire Charles Coulomb (L2C)<br />
-              Université de Montpellier<br />
-              34090 Montpellier, France
-            </address>
-          </div>
-          <div class="field">
-            <span class="lbl">Curriculum Vitae</span>
-            <a href="assets/Perradin-CV.pdf">Download CV (PDF) ↓</a>
-          </div>
-        </div>
-        <div>
-          <div class="field" style="margin-bottom:.8rem">
-            <span class="lbl">Profiles</span>
-          </div>
-          <div class="social-row">
-            <a href="https://orcid.org/0009-0009-5649-9414" target="_blank" rel="noopener"><span>ORCID · 0009-0009-5649-9414</span><span class="arr">→</span></a>
-            <a href="https://github.com/jperradin" target="_blank" rel="noopener"><span>GitHub · @jperradin</span><span class="arr">→</span></a>
-            <a href="https://arxiv.org/search/cond-mat?searchtype=author&query=Perradin,+J" target="_blank" rel="noopener"><span>arXiv · author listing</span><span class="arr">→</span></a>
-            <a href="https://scholar.google.com/citations?hl=en&user=xru1X6YAAAAJ" target="_blank" rel="noopener"><span>Google Scholar</span><span class="arr">→</span></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<footer>© Julien Perradin</footer>
 
 </main>
-
-<!-- ============================ FOOTER ============================ -->
-<footer class="site-footer">
-  <div class="wrap">
-    <p>© <span id="year">2026</span> Julien Perradin · @jperradin</p>
-    <p>Hosted on GitHub Pages · <a href="#top">Back to top ↑</a></p>
-  </div>
-</footer>
-
-<script src="main.js"></script>
-
-
+</div>
 </body>
 </html>
